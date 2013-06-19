@@ -28,6 +28,7 @@ public class MoveTest {
         moves.add("spock");
 
         Move move = new Move();
+
         Assert.assertEquals(move.getMoves(), moves);
     }
 
