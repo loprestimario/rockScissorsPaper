@@ -1,4 +1,4 @@
-package rps;
+package move;
 
 import java.util.ArrayList;
 

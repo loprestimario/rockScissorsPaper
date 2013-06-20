@@ -1,4 +1,4 @@
-package rps;
+package move;
 
 public class MoveValidator {
 

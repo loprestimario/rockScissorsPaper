@@ -1,8 +1,8 @@
 import junit.framework.Assert;
 import org.junit.Test;
-import rps.Move;
-import rps.MoveRules;
-import rps.MoveSet;
+import move.Move;
+import move.MovePot;
+import move.MoveRules;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -21,10 +21,10 @@ public class MoveTest {
     public void testMove() {
 
         Set moves = new HashSet();
-        moves.add("sasso");
-        moves.add("carta");
-        moves.add("forbici");
-        moves.add("lucertola");
+        moves.add("rock");
+        moves.add("paper");
+        moves.add("scissor");
+        moves.add("lizard");
         moves.add("spock");
 
         Move move = new Move();
@@ -35,10 +35,10 @@ public class MoveTest {
     public void testMoveKey() {
 
         Set moves = new HashSet();
-        moves.add("sasso");
-        moves.add("carta");
-        moves.add("forbici");
-        moves.add("lucertola");
+        moves.add("rock");
+        moves.add("paper");
+        moves.add("scissor");
+        moves.add("lizard");
         moves.add("spock");
 
         Move move = new Move();
@@ -49,12 +49,12 @@ public class MoveTest {
     public void testWinsAgain() {
 
         ArrayList moves = new ArrayList();
-        moves.add("forbici");
-        moves.add("lucertola");
+        moves.add("scissor");
+        moves.add("lizard");
 
         Move m = new Move();
-        MoveSet moveSet= m.getMoveSet();
-        MoveRules move = moveSet.getRules().get("sasso");
+        MovePot moveSet= m.getMoveSet();
+        MoveRules move = moveSet.getRules().get("rock");
         Assert.assertEquals(move.getWinsAgainst(), moves);
     }
 

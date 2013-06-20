@@ -1,5 +1,7 @@
 package rps;
 
+import move.MoveValidator;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,7 +1,7 @@
 import junit.framework.Assert;
 import org.junit.Test;
-import rps.Move;
-import rps.MoveValidator;
+import move.Move;
+import move.MoveValidator;
 import rps.RockPaperScissorsApp;
 import rps.WinnerChooser;
 
@@ -13,34 +13,34 @@ public class RockPaperScissorsAppTest {
     @Test
     public void testWinner_RockWinsOnScissors() {
 
-        String winnerResult= winnerChooser.chooseWinner(Move.SASSO, Move.FORBICI);
-        Assert.assertEquals(Move.SASSO,winnerResult);
+        String winnerResult= winnerChooser.chooseWinner(Move.ROCK, Move.SCISSOR);
+        Assert.assertEquals(Move.ROCK,winnerResult);
     }
 
     @Test
     public void testWinner_ScissorsLooseOnRock() {
 
-        String winnerResult= winnerChooser.chooseWinner(Move.FORBICI, Move.SASSO);
-        Assert.assertEquals(Move.SASSO,winnerResult);
+        String winnerResult= winnerChooser.chooseWinner(Move.SCISSOR, Move.ROCK);
+        Assert.assertEquals(Move.ROCK,winnerResult);
     }
 
     @Test
     public void testWinner_PaperWinsRock() {
 
-        String winnerResult= winnerChooser.chooseWinner(Move.CARTA, Move.SASSO);
-        Assert.assertEquals(Move.CARTA,winnerResult);
+        String winnerResult= winnerChooser.chooseWinner(Move.PAPER, Move.ROCK);
+        Assert.assertEquals(Move.PAPER,winnerResult);
     }
 
     @Test
     public void testWinner_RockLoosePaper() {
 
-        String winnerResult= winnerChooser.chooseWinner(Move.SASSO, Move.CARTA);
-        Assert.assertEquals(Move.CARTA,winnerResult);
+        String winnerResult= winnerChooser.chooseWinner(Move.ROCK, Move.PAPER);
+        Assert.assertEquals(Move.PAPER,winnerResult);
     }
     @Test
     public void testWinner_PaperAgainPaper(){
 
-        String winnerResult= winnerChooser.chooseWinner(Move.CARTA, Move.CARTA);
+        String winnerResult= winnerChooser.chooseWinner(Move.PAPER, Move.PAPER);
         Assert.assertEquals(WinnerChooser.PARI,winnerResult);
     }
 

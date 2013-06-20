@@ -1,12 +1,12 @@
-package rps;
+package move;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class MoveSet {
+public class MovePot {
     private Map<String, MoveRules> rules;
 
-    public MoveSet() {
+    public MovePot() {
         rules = new HashMap<String, MoveRules>();
     }
 

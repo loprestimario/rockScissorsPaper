@@ -1,6 +1,10 @@
 package rps;
 
 
+import move.Move;
+import move.MovePot;
+import move.MoveRules;
+
 public class WinnerChooser {
 
     public static final String PARI = "pari";
@@ -8,7 +12,7 @@ public class WinnerChooser {
     public String chooseWinner(String firstMove, String secondMove) {
         String winner = "";
         Move m = new Move();
-        MoveSet moveSet= m.getMoveSet();
+        MovePot moveSet= m.getMoveSet();
         if (firstMove.equals(secondMove)) {
             winner = PARI;
 
